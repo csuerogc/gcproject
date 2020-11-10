@@ -1,3 +1,3 @@
 # GC Project
-# Terraform Files
+# Terraform files
 # Ansible files
