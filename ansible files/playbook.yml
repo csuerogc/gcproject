@@ -1,0 +1,24 @@
+---
+- hosts:  lb_servers
+  name: Configure load balance servers
+  become: yes
+  gather_facts: no
+  tasks:
+  - include_role:
+      name: nginx_lb
+
+- hosts:  web_servers
+  name: Configure web servers
+  become: yes
+  gather_facts: no
+  tasks:
+  - include_role:
+      name: tomcat
+
+- hosts:  db_servers
+  name: Configure database servers
+  become: yes
+  gather_facts: no
+  tasks:
+  - include_role:
+      name: mongodb
